@@ -12,7 +12,7 @@
 #include <sys/stat.h>
 #include <signal.h>
 
-int _putchar(char c);
+int _putchar(char c); //writes the character c to stdout
 int _csti(char *s); //converts a string into an integer
 void exit(char **ary); //exit the shell
 

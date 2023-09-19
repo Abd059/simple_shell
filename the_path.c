@@ -1,5 +1,6 @@
 #include "main.h"
 
+
 /**
  * _pathbuilder - Append @str to @src for path.
  *
@@ -7,7 +8,6 @@
  *
  * Return : pointer to new memory address with combined path.
  */
-
 char *_pathbuilder(int argc, ...)
 {
 	va_list args;
@@ -47,7 +47,6 @@ char *_pathbuilder(int argc, ...)
  *
  * Return :Pointer to PATH values.
  */
-
 char **_loadpaths(env_node_t *head)
 {
 	char **paths = NULL;
@@ -82,7 +81,6 @@ char **_loadpaths(env_node_t *head)
  *
  * Return : IS_ABS_PATH for absolute, IS_REL_PATH otherwise
  */
-
 int _isrelpath(char *path)
 {
 	char first_character;
@@ -104,7 +102,6 @@ int _isrelpath(char *path)
  * @buffer : User input for forming full path
  * @exit_code : Pointer to shell's exit status
  */
-
 void _relpath(int *file_info, char **envpath, char **commands, char *buffer, int *exit_code)
 {
 	int envpath_index = 0;

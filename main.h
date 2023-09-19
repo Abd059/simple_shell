@@ -56,7 +56,7 @@ int _checkfile(char *path);
 int _checkmode(void);
 int _checkpath(char *command_path);
 int _prompt(char **buffer, size_t *bytes_read);
-int _execute(char **commands, int commands_executed, char *program, char **env);
+int _execute(char **commands, int commands_executed, char *program, char **env);/*by abdo*/env_node_t *_addnodeend(env_node_t **head, char *name, char *value);/*by abdo*/
+
 
 #endif
-

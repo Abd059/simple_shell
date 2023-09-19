@@ -4,12 +4,12 @@
  * _findnode - Locate node by name in env list.
  *
  * @head: Head node in env list.
- * @name: Varible name.
+ * @name: Variable name.
  *
- * Return: NOde whit matching name.
+ * Return: Node with matching name.
  */
 
-env_node_t *findnode(env_node_t *head, char *name)
+env_node_t *_findnode(env_node_t *head, char *name)
 {
 	env_node_t *current = NULL;
 

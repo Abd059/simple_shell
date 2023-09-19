@@ -3,7 +3,7 @@
 /**
  * _getenvpathvar - Get PATH from env variables.
  *
- * Return :value of PATH variable
+ * Return: value of PATH variable.
  */
 
 char *_getenvpathvar()

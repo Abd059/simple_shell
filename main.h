@@ -62,5 +62,17 @@ void handle_sigint(int signum _attribute_((unused)));
 char *_getfullpath(char *path, char *command);
 char **_getenvs(char **env);
 char *_getenvpathvar();
+int main(int argc __attribute__((unused)), char *argv[], char *env[]);
+int _putchar(char character, int file_descriptor);
+char **_tokenize(char *str, char *delimiter);
+int _tokencount(char *str, char *delimiter);
+void _free(char **commands);
+void free_list(env_node_t *head);
+void _free(char **commands);
+int _setenv(const char *name, const char *value, int overwrite);
+int _isenvvarpath(char *env_variable);
+void _isexit(char **commands, char *buffer, char **envpath, int signal_received, char **env_clone);
+int _isexec(char *path);
+
 
 #endif

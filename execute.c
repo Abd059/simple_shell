@@ -45,7 +45,8 @@ int _execute(char **commands, int commands_executed, char *program, char **env)
 	}
 	else if (file_info == INVALID_COMMAND || file_info == IS_REL_PATH)
 	{
-		_printerror(commands_executed, 5, program, ": ", ": ", pathname, ": not found\n");
+		_printerror(commands_executed, 5, program, ": ", ": ",
+				pathname, ": not found\n");
 		signal_received = INVALID_COMMAND;
 		return (INVALID_COMMAND);
 	}

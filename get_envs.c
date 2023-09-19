@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _getenvs - Get env variable as a list
+ * _getenvs - Get env variable as a list.
  *
- * @env : Pointer to sustem's env variables
+ * @env: Pointer to sustem's env variables.
  *
- * Return : Memory address of env variable copy
+ * Return: Memory address of env variable copy.
  */
 
 char **_getenvs(char **env)

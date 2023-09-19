@@ -57,6 +57,6 @@ int _checkmode(void);
 int _checkpath(char *command_path);
 int _prompt(char **buffer, size_t *bytes_read);
 int _execute(char **commands, int commands_executed, char *program, char **env);
-
+int _exitshell(char **envpath, char **env_clone, char *buffer);
 
 #endif

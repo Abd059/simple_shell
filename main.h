@@ -56,6 +56,7 @@ int _checkfile(char *path);
 int _checkmode(void);
 int _checkpath(char *command_path);
 int _prompt(char **buffer, size_t *bytes_read);
+int _execute(char **commands, int commands_executed, char *program, char **env);
 
 #endif
 

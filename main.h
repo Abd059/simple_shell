@@ -61,5 +61,6 @@ int _exitshell(char **envpath, char **env_clone, char *buffer);
 void handle_sigint(int signum _attribute_((unused)));
 char *_getfullpath(char *path, char *command);
 char **_getenvs(char **env);
+char *_getenvpathvar();
 
 #endif

@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- *  _execute -Execute the given command
+ *  _execute -Execute the given command.
  *
- *  @commands_executed: Number of executed commands
- *  @commands: ginen commands
- *  @program: Shell's name
- *  @env: Cloned enviroment variables
+ *  @commands_executed: Number of executed commands.
+ *  @commands: ginen commands.
+ *  @program: Shell's name.
+ *  @env: Cloned enviroment variables.
  *
- *  Return: child process exit code or error code
+ *  Return: child process exit code or error code.
  */
 
 int _execute(char **commands, int commands_executed, char *program, char **env)

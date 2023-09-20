@@ -58,7 +58,7 @@ int _checkpath(char *command_path);
 int _prompt(char **buffer, size_t *bytes_read);
 int _execute(char **commands, int commands_executed, char *program, char **env);
 int _exitshell(char **envpath, char **env_clone, char *buffer);
-void handle_sigint(int signum _attribute_((unused)));
+void handle_sigint(int signum __attribute__((unused)));
 char *_getfullpath(char *path, char *command);
 char **_getenvs(char **env);
 char *_getenvpathvar();

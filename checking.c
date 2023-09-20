@@ -57,11 +57,13 @@ int _checkfile(char *path)
 	{
 		return (IS_REL_PATH);
 	}
-	if (access(path, F_OK == VALID_COMMAND)
-	{
+	if (access(path , F_OK == VALID_COMMAND)
+	{ 
 		return (VALID_COMMAND);
-	}
+	}		 
+
 	return (INVALID_COMMAND);
+
 }
 
 /**
@@ -88,6 +90,7 @@ int _checkenv(char *command)
 		}
 		index++;
 	}
+
 	if (command[index] != '\0')
 	{
 		return (EXIT_FAILURE);

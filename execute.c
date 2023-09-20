@@ -13,7 +13,7 @@
 
 int _execute(char **commands, int commands_executed, char *program, char **env)
 {
-	char *pathname = Null;
+	char *pathname = NUll;
 	int status = 0;
 	pid_t pid;
 	int file_info = VALID_COMMAND;

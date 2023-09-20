@@ -77,6 +77,6 @@ char *_pathbuilder(int argc, ...);
 char **_loadpaths(env_node_t *head);
 int _isrelpath(char *path);
 void _relpath(int *file_info, char **envpath, char **commands, char *buffer, int *exit_code);
-
+void _printenv(void);
 
 #endif

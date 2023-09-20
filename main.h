@@ -58,9 +58,10 @@ int _checkfile(char *path);
 int _checkmode(void);
 int _checkpath(char *command_path);
 int _prompt(char **buffer, size_t *bytes_read);
-int _execute(char **commands, int commands_executed, char *program, char **env);
+int _execute(char **commands, int commands_executed,
+	      char *program, char **env);
 int _exitshell(char **envpath, char **env_clone, char *buffer);
-void handle_sigint(int signum __attribute__((unused)));
+void handle_sigint(int signum);
 char *_getfullpath(char *path, char *command);
 char **_getenvs(char **env);
 char *_getenvpathvar();
@@ -73,12 +74,14 @@ void free_list(env_node_t *head);
 void _freestr(char *str);
 int _setenv(const char *name, const char *value, int overwrite);
 int _isenvvarpath(char *env_variable);
-void _isexit(char **commands, char *buffer, char **envpath, int signal_received, char **env_clone);
+void _isexit(char **commands, char *buffer,
+		char **envpath, int signal_received, char **env_clone);
 int _isexec(char *path);
 char *_pathbuilder(int argc, ...);
 char **_loadpaths(env_node_t *head);
 int _isrelpath(char *path);
-void _relpath(int *file_info, char **envpath, char **commands, char *buffer, int *exit_code);
+void _relpath(int *file_info, char **envpath,
+		char **commands, char *buffer, int *exit_code);
 void _printenv(void);
 void _printerror(int commands_executed, int param_count, ...);
 void print_number(int number);

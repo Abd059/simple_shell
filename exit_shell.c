@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 
 /**
  * _exitshell - Clean up memory before exiting.

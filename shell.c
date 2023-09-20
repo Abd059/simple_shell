@@ -16,8 +16,10 @@ env_node_t *head = NULL;
 */
 int main(int argc __attribute__((unused)), char *argv[], char *env[])
 {
+	env_node_t *head = NULL;
+	int signal_received = 0;
 	char *buffer = NULL;
-	char **commands = NULL, **envpath = NULL, **env_clone = NULL;
+	char **commands = NULL,  **envpath = NULL, **env_clone = NULL;
 	size_t bytes_read = 0;
 	int commands_executed = 0;
 	int exit_code = NULL_FOUND, file_info = VALID_COMMAND;

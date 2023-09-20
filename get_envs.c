@@ -29,7 +29,7 @@ char **_getenvs(char **env)
 	while (env_clone[index] != NULL)
 	{
 		name = strtok(env_clone[index], "=");
-		value strtok(NULL, "\n");
+		value = strtok(NULL, "\n");
 		_addnodeend(&head, name, value);
 		index++;
 	}

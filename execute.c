@@ -13,7 +13,7 @@
 
 int _execute(char **commands, int commands_executed, char *program, char **env)
 {
-	char *pathname = NUll;
+	char *pathname = NULL;
 	int status = 0;
 	pid_t pid;
 	int file_info = VALID_COMMAND;
@@ -32,7 +32,7 @@ int _execute(char **commands, int commands_executed, char *program, char **env)
 			signal_received = EXIT_SUCCESS;
 			if (execve(pathname, commands, env) == ERROR_OCCURED)
 			{
-				sginal_received = status;
+				signal_received = status;
 				exit(EXIT_FAILURE);
 			}
 		}

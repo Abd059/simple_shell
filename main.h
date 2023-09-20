@@ -46,6 +46,8 @@ typedef struct env_node
 #define IGNORE 0
 #define EXIT (_strcmp(commands[0], "exit") == EQUAL_STRING)
 
+extern char **environ;
+
 char *_strcpy(char *dest, char *src);
 int _strlen(char *str);
 char *_strdup(char *str);
@@ -68,7 +70,7 @@ char **_tokenize(char *str, char *delimiter);
 int _tokencount(char *str, char *delimiter);
 void _free(char **commands);
 void free_list(env_node_t *head);
-void _free(char **commands);
+void _freestr(char *str);
 int _setenv(const char *name, const char *value, int overwrite);
 int _isenvvarpath(char *env_variable);
 void _isexit(char **commands, char *buffer, char **envpath, int signal_received, char **env_clone);
@@ -80,5 +82,11 @@ void _relpath(int *file_info, char **envpath, char **commands, char *buffer, int
 void _printenv(void);
 void _printerror(int commands_executed, int param_count, ...);
 void print_number(int number);
+extern int signal_received;
+extern env_node_t *head;
+
+env_node_t *_addnodeend(env_node_t **head, char *name, char *value);
+env_node_t *_findnode(env_node_t *head, char *name);
+
 
 #endif

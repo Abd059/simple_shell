@@ -37,7 +37,7 @@ void print_number(int number)
 	}
 	if (count == 0)
 	{
-		_putchar('0', StDERR_FILENO);
+		_putchar('0', STDERR_FILENO);
 	}
 }
 

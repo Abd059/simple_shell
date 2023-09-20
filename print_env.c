@@ -18,7 +18,7 @@ void _printenv(void)
 		{
 			length = _strlen(current->value);
 		}
-		write(STDOUT_FILENO, currrent->value, length);
+		write(STDOUT_FILENO, current->value, length);
 		write(STDOUT_FILENO, "\n", 1);
 		current = current->next;
 	}

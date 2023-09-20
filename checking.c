@@ -53,49 +53,15 @@ int _checkfile(char *path)
 		}
 		return (INVALID_COMMAND);
 	}
+
 	if (_isrelpath(path) == IS_REL_PATH)
 	{
 		return (IS_REL_PATH);
 	}
-	if (access(path , F_OK == VALID_COMMAND)
-	{ 
+	if (access(path, F_OK) == VALID_COMMAND)
+	{
 		return (VALID_COMMAND);
-	}		 
-
+	}
 	return (INVALID_COMMAND);
-
 }
 
-/**
- * _checkenv - Check for the 'env' command and display env variables.
- *
- * @command: User's input command.
- *
- * Return: EXIT_SUCCESS for 'env', EXIT_FAILURE otherwise.
-*/
-int _checkenv(char *command)
-{
-	char env[] = "env";
-	int index = 0;
-
-	if (command == NULL)
-	{
-		return (EXIT_FAILURE);
-	}
-	while (env[index] != '\0')
-	{
-		if (command[index] != env[index])
-		{
-			return (EXIT_FAILURE);
-		}
-		index++;
-	}
-
-	if (command[index] != '\0')
-	{
-		return (EXIT_FAILURE);
-	}
-	_printenv();
-	signal_received = EXIT_SUCCESS;
-	return (EXIT_SUCCESS);
-}

@@ -23,14 +23,14 @@ int main(int argc __attribute__((unused)), char *argv[], char *env[])
 	int exit_code = NULL_FOUND, file_info = VALID_COMMAND;
 
 	signal(SIGINT, handle_sigint);
-	envclone = _getenvs(env);
+	env_clone = _getenvs(env);
 	_setenv(SHLVL_NAME, SHLVL_VAL, IGNORE);
 	envpath = _loadpaths(head);
 	for (; ;)
 	{
 		commands_executed++;
 		exit_code = NULL_FOUND;
-		if (_prompt(&buffer, &byres_read == EOF))
+		if (_prompt(&buffer, &bytes_read) == EOF)
 			return (_exitshell(envpath, env_clone, buffer));
 		commands = _tokenize(buffer, " \t\r\n");
 		_isexit(commands, buffer, envpath, signal_received, env_clone);

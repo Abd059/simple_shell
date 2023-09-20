@@ -4,9 +4,9 @@
 /**
  * _pathbuilder - Append @str to @src for path.
  *
- * @argc : Number of strings to append.
+ * @argc: Number of strings to append.
  *
- * Return : pointer to new memory address with combined path.
+ * Return: pointer to new memory address with combined path.
  */
 char *_pathbuilder(int argc, ...)
 {
@@ -43,9 +43,9 @@ char *_pathbuilder(int argc, ...)
 /**
  * _loadpaths - Get values for PATH.
  *
- * @head : Head node in env variable list.
+ * @head: Head node in env variable list.
  *
- * Return :Pointer to PATH values.
+ * Return: Pointer to PATH values.
  */
 char **_loadpaths(env_node_t *head)
 {
@@ -77,9 +77,9 @@ char **_loadpaths(env_node_t *head)
 /**
  * _isrelpath - Check if @path is a relative path.
  *
- * @path : Path to the file to be exectud.
+ * @path: Path to the file to be exectud.
  *
- * Return : IS_ABS_PATH for absolute, IS_REL_PATH otherwise
+ * Return: IS_ABS_PATH for absolute, IS_REL_PATH otherwise
  */
 int _isrelpath(char *path)
 {
@@ -96,13 +96,14 @@ int _isrelpath(char *path)
 /**
  * _relpath - Check for relative path in @commands.
  *
- * @file_info : Flag indicating relative command.
- * @envpath : Pointer to PATH variables.
- * @commands : Pointer to command.
- * @buffer : User input for forming full path
- * @exit_code : Pointer to shell's exit status
+ * @file_info: Flag indicating relative command.
+ * @envpath: Pointer to PATH variables.
+ * @commands: Pointer to command.
+ * @buffer: User input for forming full path
+ * @exit_code: Pointer to shell's exit status
  */
-void _relpath(int *file_info, char **envpath, char **commands, char *buffer, int *exit_code)
+void _relpath(int *file_info, char **envpath, char **commands,
+		char *buffer, int *exit_code)
 {
 	int envpath_index = 0;
 
@@ -111,7 +112,8 @@ void _relpath(int *file_info, char **envpath, char **commands, char *buffer, int
 		while (envpath != NULL && envpath[envpath_index] != NULL)
 		{
 			*exit_code = NULL_FOUND;
-			commands[0] = _getfullpath(envpath[envpath_index], strtok(buffer, "\t\r\n"));
+			commands[0] = _getfullpath(envpath[envpath_index],
+					strtok(buffer, "\t\r\n"));
 			if (_checkfile(commands[0]) == VALID_COMMAND)
 			{
 				*exit_code = EXIT_SUCCESS;

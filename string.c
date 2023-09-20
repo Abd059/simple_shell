@@ -91,7 +91,7 @@ char *_strcpy(char *dest, char *src)
 
 	while (src[index] != '\0')
 	{
-		dest[infex] = src[index];
+		dest[index] = src[index];
 		index++;
 	}
 	dest[index] = '\0';

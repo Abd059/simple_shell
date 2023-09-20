@@ -9,8 +9,8 @@
  * @signal_received: Exit code.
  * @env_clone: Temporary env variable address.
  */
-void _isexit(char **commands, char *buffer, char **envpath,
-int signal_received, char **env_clone)
+void _isexit(char **commands, char *buffer, char **envpath
+		, int signal_received, char **env_clone)
 {
 	int index = 0;
 

@@ -79,5 +79,6 @@ int _isrelpath(char *path);
 void _relpath(int *file_info, char **envpath, char **commands, char *buffer, int *exit_code);
 void _printenv(void);
 void _printerror(int commands_executed, int param_count, ...);
+void print_number(int number);
 
 #endif

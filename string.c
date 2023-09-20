@@ -69,10 +69,10 @@ int _strlen(char *str)
 char *_strdup(char *str)
 {
 	char *duplicate = NULL;
-	int len = 0;
+	int length = 0;
 
-	len = _strlen(str);
-	duplicate = malloc(sizeof(char) * len);
+	length = _strlen(str);
+	duplicate = malloc(sizeof(char) * length);
 	_strcpy(duplicate, str);
 	return (duplicate);
 }

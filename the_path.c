@@ -102,14 +102,15 @@ int _isrelpath(char *path)
  * @buffer: User input for forming full path
  * @exit_code: Pointer to shell's exit status
  */
-void _relpath(int *file_info, char **envpath, char **commands,
-		char *buffer, int *exit_code)
+void _relpath(int *file_info, char **envpath, char **commands
+		, char *buffer, int *exit_code)
 {
 	int envpath_index = 0;
 
 	if (*file_info == IS_REL_PATH)
 	{
-		while (envpath != NULL && envpath[envpath_index] != NULL)
+		while (envpath != NULL &&
+		envpath[envpath_index] != NULL)
 		{
 			*exit_code = NULL_FOUND;
 			commands[0] = _getfullpath(envpath[envpath_index],

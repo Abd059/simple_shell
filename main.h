@@ -73,6 +73,12 @@ int _setenv(const char *name, const char *value, int overwrite);
 int _isenvvarpath(char *env_variable);
 void _isexit(char **commands, char *buffer, char **envpath, int signal_received, char **env_clone);
 int _isexec(char *path);
-
+char *_pathbuilder(int argc, ...);
+char **_loadpaths(env_node_t *head);
+int _isrelpath(char *path);
+void _relpath(int *file_info, char **envpath, char **commands, char *buffer, int *exit_code);
+void _printenv(void);
+void _printerror(int commands_executed, int param_count, ...);
+void print_number(int number);
 
 #endif

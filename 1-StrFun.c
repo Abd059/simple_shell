@@ -15,8 +15,6 @@ int _strlen(char *s)
 	return (a);
 }
 
-#include "main.h"
-
 /**
  * _strcat - concat 2 string
  * @dest:char
@@ -42,7 +40,6 @@ char *_strcat(char *dest, char *src)
 	return (s);
 }
 
-#include "main.h"
 /**
  * _strcmp - compare 2 string
  * @s1:string

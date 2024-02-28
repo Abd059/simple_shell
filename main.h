@@ -23,4 +23,14 @@ int _putchar(char);
 void _puts(char *str);
 char *_strcpy(char *dest, char *src);
 
+/* 3-StrFun.c */
+char *_strncpy(char *dest, char *src, int n);
+char *_strncat(char *dest, char *src, int n);
+int _putchar(char c);
+char *_strchr(char *s, char c);
+
+/* 4-StrFun.c */
+char **strtow(char *str);
+char *_strdup(char *str);
+
 #endif

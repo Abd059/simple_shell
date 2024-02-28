@@ -2,15 +2,14 @@
 #define MAIN_H
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
-#include <sys/types.h>
-#include <sys/wait.h>
 #include <sys/stat.h>
-#include <limits.h>
-#include <fcntl.h>
+#include <sys/wait.h>
+#include <string.h>
+#include <unistd.h>
+#include <stdlib.h>
 #include <errno.h>
+#include <stdarg.h>
+#include <signal.h>
 
 /**
  * struct env_node - Node pointing to environment variable.
@@ -49,28 +48,10 @@ typedef struct env_node
 
 extern char **environ;
 
-
-/* 1-StrFun.c */
-int _putchar(char c);
-int _strlen(char *s);
-char *_strcat(char *dest, char *src);
-int _strcmp(char *s1, char *s2);
-
-/* 2-StrFun.c */
-int _putchar(char);
-void _puts(char *str);
 char *_strcpy(char *dest, char *src);
-
-/* 3-StrFun.c */
-char *_strncpy(char *dest, char *src, int n);
-char *_strncat(char *dest, char *src, int n);
-int _putchar(char c);
-char *_strchr(char *s, char c);
-
-/* 4-StrFun.c */
-char **strtow(char *str);
+int _strlen(char *str);
 char *_strdup(char *str);
-
+int _strcmp(char *s1, char *s2);
 const char *_strstr(const char *haystack, const char *needle);
 int _checkenv(char *command);
 int _checkfile(char *path);
@@ -78,13 +59,14 @@ int _checkmode(void);
 int _checkpath(char *command_path);
 int _prompt(char **buffer, size_t *bytes_read);
 int _execute(char **commands, int commands_executed,
-		char *program, char **env);
+	      char *program, char **env);
 int _exitshell(char **envpath, char **env_clone, char *buffer);
 void handle_sigint(int signum);
 char *_getfullpath(char *path, char *command);
 char **_getenvs(char **env);
 char *_getenvpathvar();
 int main(int argc __attribute__((unused)), char *argv[], char *env[]);
+int _putchar(char character, int file_descriptor);
 char **_tokenize(char *str, char *delimiter);
 int _tokencount(char *str, char *delimiter);
 void _free(char **commands);
